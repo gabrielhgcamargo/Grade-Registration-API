@@ -10,5 +10,4 @@ public class TutorialRestApiApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TutorialRestApiApplication.class, args);
 	}
-
 }
