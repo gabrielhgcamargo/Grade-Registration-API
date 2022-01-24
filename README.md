@@ -3,19 +3,19 @@
 
 > Before registering the test grade, it is necessary to register the student responsible for that grade
 
-- Maven
+- Maven -> already in the project
 
-- Spring Boot
+- Spring Boot -> already in the project
 
-- Sprint Data JPA
+- Sprint Data JPA -> already in the project
 
-- Spring Security e JWT
+ - Bean Validation -> already in the project
 
-- Bean Validation
+- Lombok -> already in the project
 
-- Lombok
+- Spring Security e JWT -> to be implemented
 
-- Swagger
+- Swagger -> to be implemented
 
 in development...
 
