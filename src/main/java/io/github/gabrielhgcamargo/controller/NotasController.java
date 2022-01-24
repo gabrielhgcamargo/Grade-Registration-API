@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 
 
 @RestController
-@RequestMapping("/api/notas")
+@RequestMapping("/api/grades")
 public class NotasController {
 
     private NotaService service;

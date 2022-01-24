@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api/aluno")
+@RequestMapping("/api/student")
 public class AlunoController {
 
     private AlunoRepository repository;
@@ -29,7 +29,7 @@ public class AlunoController {
     }
 
 
-    @PostMapping("salvar")
+    @PostMapping("save")
     @ResponseStatus(HttpStatus.CREATED)
     public AlunoModel save(@RequestBody @Valid AlunoModel aluno){
         return repository.save(aluno);
