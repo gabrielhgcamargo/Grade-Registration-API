@@ -6,7 +6,7 @@
 
 - Spring Boot
 
-- Sprint Data
+- Sprint Data JPA
 
 - Spring Security e JWT
 
