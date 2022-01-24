@@ -79,9 +79,10 @@ in development...
     
 >---------------------------------------------
 
-`GET - http://localhost:8080/api/student?nome=ga`
-`TO GET ALL STUDENTES = Don't use parameters
- TO GET SPECIFIC STUDENTS = Use parameters`
+`GET`
+`TO GET ALL STUDENTES = Don't use parameters - http://localhost:8080/api/student`
+
+`TO GET SPECIFIC STUDENTS = Use parameters - http://localhost:8080/api/student?nome=ga`
 
 #### Response
 
