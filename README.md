@@ -3,19 +3,19 @@
 
 > Before registering the test grade, it is necessary to register the student responsible for that grade
 
-- Maven
+- Maven -> already in the project
 
-- Spring Boot
+- Spring Boot -> already in the project
 
-- Sprint Data JPA
+- Sprint Data JPA -> already in the project
 
-- Spring Security e JWT
+ - Bean Validation -> already in the project
 
-- Bean Validation
+- Lombok -> already in the project
 
-- Lombok
+- Spring Security e JWT -> to be implemented
 
-- Swagger
+- Swagger -> to be implemented
 
 in development...
 
@@ -76,6 +76,26 @@ in development...
 #### Response
     
     Status : 204 No Content
+    
+>---------------------------------------------
+
+`GET`
+
+`TO GET ALL STUDENTES = Don't use parameters - http://localhost:8080/api/student`
+
+`TO GET SPECIFIC STUDENTS = Use parameters - http://localhost:8080/api/student?nome=ga`
+
+#### Response
+
+    [
+    {
+        "id": 1,
+        "nome": "gabriel",
+        "dataNascimento": "2021-01-31"
+    }
+    ]
+
+    Status : 200 OK
     
 ## GradeController - Request: http://locacalhost:8080/api/grade
 
