@@ -1,4 +1,4 @@
-package io.github.gabrielhgcamargo.rest.dto.model;
+package io.github.gabrielhgcamargo.model;
 
 import io.github.gabrielhgcamargo.enums.StatusNotas;
 import lombok.AllArgsConstructor;

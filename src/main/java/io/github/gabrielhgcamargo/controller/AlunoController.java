@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.controller;
 
-import io.github.gabrielhgcamargo.rest.dto.model.AlunoModel;
+import io.github.gabrielhgcamargo.model.AlunoModel;
 import io.github.gabrielhgcamargo.repository.AlunoRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;

@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.service.impl;
 
-import io.github.gabrielhgcamargo.rest.dto.model.UserModel;
+import io.github.gabrielhgcamargo.model.UserModel;
 import io.github.gabrielhgcamargo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;

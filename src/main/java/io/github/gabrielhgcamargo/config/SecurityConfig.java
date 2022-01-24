@@ -34,7 +34,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/api/student/save")
-                    .hasAnyRole("STUDENT","TEACHER")
+                    .permitAll()
                 .antMatchers("/api/student/**")
                     .hasRole("TEACHER")
                 .antMatchers("/api/grades/**")
