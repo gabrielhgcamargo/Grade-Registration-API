@@ -10,6 +10,8 @@
 
 - Spring Security e JWT
 
+- Bean Validation
+
 - Lombok
 
 - Swagger
