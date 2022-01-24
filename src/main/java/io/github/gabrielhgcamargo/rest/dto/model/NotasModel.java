@@ -1,4 +1,4 @@
-package io.github.gabrielhgcamargo.model;
+package io.github.gabrielhgcamargo.rest.dto.model;
 
 import io.github.gabrielhgcamargo.enums.StatusNotas;
 import lombok.AllArgsConstructor;
@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "notas")

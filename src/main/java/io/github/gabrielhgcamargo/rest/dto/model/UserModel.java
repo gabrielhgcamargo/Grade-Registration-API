@@ -1,4 +1,4 @@
-package io.github.gabrielhgcamargo.model;
+package io.github.gabrielhgcamargo.rest.dto.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

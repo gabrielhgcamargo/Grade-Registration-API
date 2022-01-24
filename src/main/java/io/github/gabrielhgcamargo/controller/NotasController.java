@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.controller;
 
-import io.github.gabrielhgcamargo.model.NotasModel;
+import io.github.gabrielhgcamargo.rest.dto.model.NotasModel;
 import io.github.gabrielhgcamargo.rest.dto.InfoNotasDTO;
 import io.github.gabrielhgcamargo.rest.dto.NotaDTO;
 import io.github.gabrielhgcamargo.service.NotaService;

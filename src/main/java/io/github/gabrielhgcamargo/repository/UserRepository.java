@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.repository;
 
-import io.github.gabrielhgcamargo.model.UserModel;
+import io.github.gabrielhgcamargo.rest.dto.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

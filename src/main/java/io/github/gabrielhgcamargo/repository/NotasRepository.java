@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.repository;
 
-import io.github.gabrielhgcamargo.model.NotasModel;
+import io.github.gabrielhgcamargo.rest.dto.model.NotasModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

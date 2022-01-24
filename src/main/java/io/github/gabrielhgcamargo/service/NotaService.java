@@ -1,6 +1,6 @@
 package io.github.gabrielhgcamargo.service;
 
-import io.github.gabrielhgcamargo.model.NotasModel;
+import io.github.gabrielhgcamargo.rest.dto.model.NotasModel;
 import io.github.gabrielhgcamargo.rest.dto.NotaDTO;
 
 import java.util.Optional;

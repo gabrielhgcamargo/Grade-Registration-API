@@ -1,7 +1,7 @@
 package io.github.gabrielhgcamargo.controller;
 
 
-import io.github.gabrielhgcamargo.model.UserModel;
+import io.github.gabrielhgcamargo.rest.dto.model.UserModel;
 import io.github.gabrielhgcamargo.service.impl.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

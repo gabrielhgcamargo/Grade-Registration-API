@@ -2,8 +2,8 @@ package io.github.gabrielhgcamargo.service.impl;
 
 import io.github.gabrielhgcamargo.enums.StatusNotas;
 import io.github.gabrielhgcamargo.exception.RegraNegocioException;
-import io.github.gabrielhgcamargo.model.AlunoModel;
-import io.github.gabrielhgcamargo.model.NotasModel;
+import io.github.gabrielhgcamargo.rest.dto.model.AlunoModel;
+import io.github.gabrielhgcamargo.rest.dto.model.NotasModel;
 import io.github.gabrielhgcamargo.repository.AlunoRepository;
 import io.github.gabrielhgcamargo.repository.NotasRepository;
 import io.github.gabrielhgcamargo.rest.dto.NotaDTO;
