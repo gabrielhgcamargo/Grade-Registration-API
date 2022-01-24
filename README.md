@@ -77,6 +77,24 @@ in development...
     
     Status : 204 No Content
     
+>---------------------------------------------
+
+`GET - http://localhost:8080/api/student?nome=ga`
+`TO GET ALL STUDENTES = Don't use parameters
+ TO GET SPECIFIC STUDENTS = Use parameters`
+
+#### Response
+
+    [
+    {
+        "id": 1,
+        "nome": "gabriel",
+        "dataNascimento": "2021-01-31"
+    }
+    ]
+
+    Status : 200 OK
+    
 ## GradeController - Request: http://locacalhost:8080/api/grade
 
 ### to be implemented
