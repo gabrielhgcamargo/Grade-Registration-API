@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.time.format.DateTimeFormatter;
 
 
@@ -25,7 +26,7 @@ public class NotasController {
     //SALVAR
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Integer save(@RequestBody NotaDTO dto){
+    public Integer save(@RequestBody @Valid NotaDTO dto){
         NotasModel notas = service.salvar(dto);
         return notas.getCodigo();
     }

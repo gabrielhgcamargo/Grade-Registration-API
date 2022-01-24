@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class AlunoModel {
     private Integer id;
 
     @Column(name = "nome", length = 100)
+    @NotEmpty(message = "Inserir nome! Este campo não pode estar vazio.")
     private String nome;
 
     @Column

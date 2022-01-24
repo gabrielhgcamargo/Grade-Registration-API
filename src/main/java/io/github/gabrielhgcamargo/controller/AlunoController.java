@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 
 
@@ -30,7 +31,7 @@ public class AlunoController {
 
     @PostMapping("salvar")
     @ResponseStatus(HttpStatus.CREATED)
-    public AlunoModel save(@RequestBody AlunoModel aluno){
+    public AlunoModel save(@RequestBody @Valid AlunoModel aluno){
         return repository.save(aluno);
 
     }
@@ -52,7 +53,7 @@ public class AlunoController {
     //ATUALIZAR
     @PutMapping("{id}")
     public void update(@PathVariable Integer id,
-                       @RequestBody AlunoModel aluno){
+                       @RequestBody @Valid AlunoModel aluno){
         repository
                 .findById(id)
                 .map(alunoExistente -> {
