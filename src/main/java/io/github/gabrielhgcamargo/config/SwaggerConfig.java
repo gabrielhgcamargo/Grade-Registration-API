@@ -31,7 +31,10 @@ public class SwaggerConfig {
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
                 .title("Grade Registration Management System - API")
-                .description("Grade registration management system, where it is possible to register specific grades of specific students.")
+                .description("Grade registration management system, where it is possible to register specific grades of specific students." +
+                        "\n\nAuthentication : To use Aluno/Notas controllers and their HTTP methods, first you have to get registered in User Controller." +
+                        "\n\n To 'Teacher' permissions, use True on the field 'admin'. To 'student', use false.\n\nTeacher role can use all HTTP methods, and " +
+                        "Student role can just save a new student in AlunoController.")
                 .version("1.0")
                 .contact(contact())
                 .build();
