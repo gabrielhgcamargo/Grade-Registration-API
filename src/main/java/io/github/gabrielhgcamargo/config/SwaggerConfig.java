@@ -34,7 +34,8 @@ public class SwaggerConfig {
                 .description("Grade registration management system, where it is possible to register specific grades of specific students." +
                         "\n\nAuthentication : To use Aluno/Notas controllers and their HTTP methods, first you have to get registered in User Controller." +
                         "\n\n To 'Teacher' permissions, use True on the field 'admin'. To 'student', use false.\n\nTeacher role can use all HTTP methods, and " +
-                        "Student role can just save a new student in AlunoController." + "\n\nBefore registering the test grade, it is necessary to register the student responsible for that grade.")
+                        "Student role can just save a new student in AlunoController." + "\n\nBefore registering the test grade, it is necessary to register the student responsible for that grade." +
+                        "\n\nStudent and User ID are AUTO-INCREMENT !!!")
                 .version("1.0")
                 .contact(contact())
                 .build();
