@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class TutorialRestApiApplication {
+public class NotaAlunoApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(TutorialRestApiApplication.class, args);
+		SpringApplication.run(NotaAlunoApplication.class, args);
 	}
 }
