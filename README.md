@@ -72,7 +72,8 @@ Response
 STATUS: 201 CREATED
 
 ```
-Now, with a user registered, you can register some student:
+Now, with a user registered, you can register some student.
+
 And do not forget to in Authorization in Postman, choose 'Basic Auth', and insert your Login/Password. To all HTTP Methods below...
 
 ```
