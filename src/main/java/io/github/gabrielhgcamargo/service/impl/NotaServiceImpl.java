@@ -28,7 +28,7 @@ public class NotaServiceImpl implements NotaService {
         Integer idAluno = dto.getAluno();
         AlunoModel aluno = repository
                 .findById(idAluno)
-                .orElseThrow(() -> new RegraNegocioException("Código de aluno inválido"));
+                .orElseThrow(() -> new RegraNegocioException("Invalid Student ID"));
 
         NotasModel notas = new NotasModel();
         notas.setCodigo(dto.getCodigo());

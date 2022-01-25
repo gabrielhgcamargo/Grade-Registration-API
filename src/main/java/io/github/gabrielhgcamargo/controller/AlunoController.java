@@ -2,6 +2,7 @@ package io.github.gabrielhgcamargo.controller;
 
 import io.github.gabrielhgcamargo.model.AlunoModel;
 import io.github.gabrielhgcamargo.repository.AlunoRepository;
+import io.swagger.annotations.*;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/student")
+@Api("Students API")
 public class AlunoController {
 
     private AlunoRepository repository;
@@ -21,17 +23,30 @@ public class AlunoController {
     public AlunoController(AlunoRepository repository) { this.repository = repository; }
 
     @GetMapping("{id}")
-    public AlunoModel getAlunoById(@PathVariable Integer id) {
+    @ApiOperation("Get student details")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Student found"),
+        @ApiResponse(code = 404, message = "Student not found with this ID"),
+        @ApiResponse(code = 400, message = "Validation Error")
+    }
+    )
+    public AlunoModel getAlunoById(@PathVariable @ApiParam("Student ID") Integer id) {
         return repository
                 .findById(id)
                 .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Aluno não encontrado"));
+                        "Invalid Student ID"));
     }
 
 
     @PostMapping("save")
     @ResponseStatus(HttpStatus.CREATED)
-    public AlunoModel save(@RequestBody @Valid AlunoModel aluno){
+    @ApiOperation("Registering a new student")
+    @ApiResponses({
+            @ApiResponse(code = 201, message = "Student created"),
+            @ApiResponse(code = 400, message = "Validation Error")
+    }
+    )
+    public AlunoModel save(@RequestBody @Valid @ApiParam("All student fields completed") AlunoModel aluno){
         return repository.save(aluno);
 
     }
@@ -39,21 +54,33 @@ public class AlunoController {
     //DELETAR
     @DeleteMapping("{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void delete( @PathVariable Integer id ){
+    @ApiOperation("Delete some student")
+    @ApiResponses({
+            @ApiResponse(code = 204, message = "Student deleted"),
+            @ApiResponse(code = 404, message = "Student not found with this ID")
+    }
+    )
+    public void delete( @PathVariable @ApiParam("Id from the student to delete") Integer id ){
         repository.findById(id)
                 .map( aluno -> {
                     repository.delete(aluno);
                     return aluno;
                 })
                 .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Aluno não encontrado"));
+                        "Invalid Student ID"));
 
     }
 
     //ATUALIZAR
     @PutMapping("{id}")
-    public void update(@PathVariable Integer id,
-                       @RequestBody @Valid AlunoModel aluno){
+    @ApiOperation("Update some student")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "Student updated"),
+            @ApiResponse(code = 404, message = "Student not found with this ID")
+    }
+    )
+    public void update(@PathVariable @ApiParam("Id from the student to update") Integer id,
+                       @RequestBody @Valid @ApiParam("All student fields completed") AlunoModel aluno){
         repository
                 .findById(id)
                 .map(alunoExistente -> {
@@ -61,11 +88,17 @@ public class AlunoController {
                     repository.save(aluno);
                     return alunoExistente;
                 }).orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Aluno não encontrado"));
+                        "Invalid Student ID"));
     }
 
     //BUSCA POR PROPRIEDADES (ID, E Nome)
     @GetMapping
+    @ApiOperation("Find student with Params")
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "Student found with your params"),
+            @ApiResponse(code = 400, message = "Bad Request, check again your params!")
+    }
+    )
     public List<AlunoModel> find( AlunoModel filtro){
         ExampleMatcher matcher = ExampleMatcher
                 .matching()
