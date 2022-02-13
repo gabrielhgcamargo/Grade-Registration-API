@@ -30,6 +30,7 @@ public class NotaServiceImpl implements NotaService {
                 .findById(idAluno)
                 .orElseThrow(() -> new RegraNegocioException("Invalid Student ID"));
 
+
         NotasModel notas = new NotasModel();
         notas.setCodigo(dto.getCodigo());
         notas.setNota1(dto.getNota1());
